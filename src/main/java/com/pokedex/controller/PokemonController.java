@@ -1,7 +1,5 @@
 package com.pokedex.controller;
 
-
-import com.pokedex.dto.ResponseDto;
 import com.pokedex.service.PokemonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

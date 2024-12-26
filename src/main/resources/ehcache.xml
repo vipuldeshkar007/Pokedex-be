@@ -5,10 +5,7 @@
             http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
             http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
 
-    <!-- Define a Cache Manager -->
     <cache alias="pokemonCache">
-        <!-- Configure cache to store items for 10 minutes, with a max size of 100 items -->
-
         <expiry>
             <ttl unit="minutes">30</ttl>
         </expiry>
@@ -16,6 +13,5 @@
         <resources>
             <offheap unit="MB">20</offheap>
         </resources>
-
     </cache>
 </config>
