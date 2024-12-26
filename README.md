@@ -21,7 +21,7 @@ Follow the steps below to set up and run the application:
 Start by cloning the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/pokedex-be.git
+git clone https://github.com/vipuldeshkar007/Pokedex-be.git
 ```
 ## 2. Run the Application
 
