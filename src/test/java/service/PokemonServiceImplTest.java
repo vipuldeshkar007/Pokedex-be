@@ -39,7 +39,7 @@ public class PokemonServiceImplTest {
 
         lenient().when(restTemplate.getForObject(POKEMON_API_URL + pokemonName, Object.class)).thenReturn(mockResponse);
 
-        ResponseDto<Object> response = pokemonService.getPokemonList(pokemonName);
+        ResponseDto<Object> response = pokemonService.getPokemon(pokemonName);
 
         assertNotNull(response);
         assertEquals(200, response.getHttpStatus());
@@ -54,7 +54,7 @@ public class PokemonServiceImplTest {
         lenient().when(restTemplate.getForObject(POKEMON_API_URL + pokemonName, Object.class)).thenThrow(new RuntimeException("API failure"));
 
         PokemonNotFoundException exception = assertThrows(PokemonNotFoundException.class, () ->
-            pokemonService.getPokemonList(pokemonName));
+            pokemonService.getPokemon(pokemonName));
 
         assertEquals("Pokemon not found with the given name: nonexistentPokemon", exception.getMessage());
     }

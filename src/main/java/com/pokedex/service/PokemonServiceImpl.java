@@ -20,7 +20,7 @@ public class PokemonServiceImpl implements PokemonService{
 
     @Override
     @Cacheable(value = "pokemonCache", key = "#type+#name.toLowerCase()")
-    public ResponseDto<Object> getPokemonList(String name) {
+    public ResponseDto<Object> getPokemon(String name) {
         String lowerCaseName = name.toLowerCase();
         logger.info("Request received for Pokémon: {}", name);
         try{

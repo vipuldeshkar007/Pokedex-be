@@ -13,8 +13,8 @@ public class PokemonController {
     @Autowired
     private PokemonService pokemonService;
 
-    @GetMapping("/getPokemonList/{name}")
-    public ResponseEntity<Object> getPokemonList(@PathVariable String name){
-        return ResponseEntity.ok(pokemonService.getPokemonList(name));
+    @GetMapping("/pokemon/{name}")
+    public ResponseEntity<Object> getPokemon(@PathVariable String name){
+        return ResponseEntity.ok(pokemonService.getPokemon(name));
     }
 }
